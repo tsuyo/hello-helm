@@ -12,3 +12,11 @@ kubectl delete -n demo ingress hello
 kubectl delete -n demo service hello
 kubectl delete -n demo deployment hello
 ```
+
+# Step 2 Create Helm Chart
+Deploy
+```
+git checkout v2
+helm list -n demo
+helm upgrade hello -i -n demo ./hello
+```
