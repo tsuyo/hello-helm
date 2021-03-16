@@ -1,6 +1,6 @@
 config:
-  message: こんにちは、世界
-replicaCount: 1
+  message: 今ウェビナー中です
+replicaCount: 3
 image:
   repository: kirasoa/hello-app
   tag: "latest"

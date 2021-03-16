@@ -31,3 +31,15 @@ Deploy
 git checkout v3
 helm upgrade hello -i -n demo ./hello
 ```
+
+# Step 4 Update and Rollback Helm Chart
+Deploy
+```
+git checkout v4
+helm upgrade hello -i -n demo ./hello
+helm list -n demo
+helm history hello -n demo
+helm rollback hello 1 -n demo
+helm history hello -n demo
+helm rollback hello 2 -n demo
+```
