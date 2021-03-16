@@ -20,3 +20,14 @@ git checkout v2
 helm list -n demo
 helm upgrade hello -i -n demo ./hello
 ```
+Delete
+```
+helm uninstall hello -n demo
+```
+
+# Step 3 Template Helm Chart
+Deploy
+```
+git checkout v3
+helm upgrade hello -i -n demo ./hello
+```

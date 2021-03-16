@@ -1,18 +1,18 @@
 apiVersion: networking.k8s.io/v1
 kind: Ingress
 metadata:
-  name: hello
+  name: {{ .Release.Name }}-{{ .Chart.Name }}
   annotations:
     kubernetes.io/ingress.class: nginx
 spec:
   rules:
-  - host: hello.dev.tsuyo.org
+  - host: {{ .Values.ingress.host }}
     http:
       paths:
-      - pathType: Prefix
+      - pathType: Prefix      
         path: /
         backend:
           service:
-            name: hello
+            name: {{ .Release.Name }}-{{ .Chart.Name }}
             port:
-              number: 80
+              number: {{ .Values.service.port }}
