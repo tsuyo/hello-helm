@@ -26,6 +26,8 @@ helm uninstall hello -n demo
 ```
 
 # Step 3 Template Helm Chart
+`Update application image to 0.0.2`
+
 Deploy
 ```
 git checkout v3

@@ -1,8 +1,8 @@
 config:
-  message: 今ウェビナー中です
+  message: Hello, 世界
 replicaCount: 3
 image:
-  repository: kirasoa/hello-app
+  repository: platform.tsuyo.org/hello-docker/hello
   tag: "latest"
 service:
   port: 80

@@ -4,4 +4,3 @@ metadata:
   name: {{ .Release.Name }}-{{ .Chart.Name }}
 data:
   MESSAGE: {{ .Values.config.message }}
-  VERSION: {{ .Chart.AppVersion }}

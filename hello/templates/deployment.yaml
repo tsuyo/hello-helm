@@ -11,12 +11,14 @@ spec:
     metadata:
       labels:
         app: {{ .Release.Name }}-{{ .Chart.Name }}
+        helm-revision: "{{ .Release.Revision }}" # this always makes helm recreate a pod and use a new image
     spec:
       containers:
       - name: {{ .Release.Name }}-{{ .Chart.Name }}
         image: {{ .Values.image.repository }}:{{ .Values.image.tag }}
         ports:
          - containerPort: {{ .Values.service.targetPort }}
+        imagePullPolicy: Always
         envFrom:
         - configMapRef:
             name: {{ .Release.Name }}-{{ .Chart.Name }}
