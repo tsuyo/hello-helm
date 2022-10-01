@@ -1,6 +1,6 @@
 config:
   message: Hello, 世界
-replicaCount: 3
+replicaCount: 5
 image:
   repository: platform.tsuyo.org/hello-docker/hello
   tag: "latest"
